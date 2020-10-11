@@ -1,0 +1,115 @@
+@font-face{
+	font-family: "kaushan";
+	src:url("KaushanScript-Regular.otf");
+}
+body
+{
+    font-family: "Microsoft Himalaya", 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+    font-size: 20px;
+}
+header
+{
+	display: flex;
+	 background: url("fond.png") repeat top;
+}
+h2{
+	font-style: italic;
+}
+header nav ul 
+{
+	display: flex;
+	list-style-type: none;
+}
+h1{
+	text-shadow: 2px 2px 3px red;
+	color: black;
+}
+#auteure h1{
+	text-shadow: 2px 2px 3px #E7DDDD;
+	color: black;
+
+}
+nav li
+{
+	margin-right: 15px;
+}
+nav a:hover
+{
+	color:red;
+	font-weight: bold;
+	padding-bottom: 2px;
+}
+#bloc_page
+{
+    width: 900px;
+    margin: auto;
+    margin-left: 19%;
+
+
+}
+section{
+	display: flex;
+}
+aside a {
+	margin-left: 15px;
+}
+aside div {
+	display: flex;
+}
+#connexion{
+	width: 270px;
+	border: solid red 3px;
+	padding: 10px;
+	background-color: #FFB600;
+	right: 150px;
+	top:20px;
+	position: fixed;
+}
+#auteure {
+	width: 270px;
+	border: solid black 3px;
+	padding: 10px;
+	background-color: #E7DDDD;
+	right: 150px;
+	top:330px;
+	position: fixed;
+}
+#deco{
+	background: url(fond.png) repeat top ;
+}
+footer{
+	display: flex;
+	background: url("ico_top.png") no-repeat top center, url("separateur.png") repeat-x top;
+}
+footer ul{
+	display: flex;
+	flex-direction: column;
+	width: 50%
+	padding-right:0px;
+}
+footer ul li{
+	list-style-image: url("puce.png");
+list-style-position: inside;
+}
+footer ol{
+	width: 50%;
+display: flex;
+flex-direction: column;
+align-items: left;
+list-style-image: url("popcorn.jfif");
+
+}
+article h1{
+	background-color: white;
+	border: rgb(255,184,0) 5px solid;
+}
+article{
+	background-color: rgb(231,221,221);
+}
+#salle{
+	opacity: 0.5;
+}
+.flottant{
+	float: right;
+}
