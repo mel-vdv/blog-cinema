@@ -1,37 +1,97 @@
-## Welcome to GitHub Pages
+## Welcome to GitHub
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="blogcine.css">
+	<title>blogcine</title>
+</head>
 
-You can use the [editor on GitHub](https://github.com/mel-vdv/blog-cinema/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+<body>
+	<div id="bloc_page">
+	<header>
+		<div id="titre_blog_cine">
+			<img src="logo_cine.jpg" alt="logo_cine"/>
+			<h1> BLOG CINE  </h1>
+		</br></br>
+			<h2> chroniques d'une geek...</h2>
+		</div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+		<nav>
+			<ul>
+				<li> <a href="...">FILMS  </a></li>
+				<li> <a href="tableau.html">SERIES  </a></li>
+			</ul>
+			<img src="salle.jpg" alt="salle" id="salle"/>
+		</nav>
+	</header>
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+	<section>
+		<article>
+			<h1><img src="logo_netflix.png" alt="logo_netflix"> My Love</h1>
+				<p>
+<?php
+try{
+	$bdd = new PDO("mysql:host=localhost;dbname=commentaires;charset=utf8","root","");
+}
+catch(Exception $e)
+{
+	die("Erreur:".$e-> getMessage());
+}
+$req=$bdd-> query("SELECT*FROM liste_articles ORDER BY date_creation DESC LIMIT 0,5");
 
-# Header 1
-## Header 2
-### Header 3
+while ($donnees=$req -> fetch()) 
+{
+	echo $donnees["titre"]";
+	echo $donnees["contenu"];
+}
+$req->closeCursor();
 
-- Bulleted
-- List
+?>
+</p>
 
-1. Numbered
-2. List
+		</article>
+		<aside id="connexion">
+			<h1> CONNECTE-TOI: </h1>
+				<form method="post" action="form.php">
+					<label for="pseudo"class="soulign">Pseudo: </label>
+					<input type="text" name="pseudo"id="pseudo"/></br></br></br>
+					<label for="pass"class="soulign">Mot de Passe: </label>
+					<input type="password" name="pass"id="pass"> </br></br></br>
+				</form>
+			<p><a href= "form.html" title="inscription">CLIQUE ICI SI TU ES NOUVEAU</a></p>
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mel-vdv/blog-cinema/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+		</aside>
+		<aside id="auteure">
+			<h1> A PROPOS DE L'AUTEURE:</h1>
+			<p id="photo_de_mel"><img src="fotocv.jpg" alt="photo de mel"></p>
+				
+			<p>
+				<img src="pharma_logo.png" class="flottant" alt="logo pharma">
+				Vieille pharmacienne à la dérive, je pagaye tant bien que mal vers la berge, celle où les développeurs web bronzent sur des transat. </p>
+			<p> Passionnée de films et de séries, j'ai décidé de jouer le rôle de celle qui ne crée rien et ne fait que critiquer le travail des autres. Soyons ensemble le mauvais Eric zemmour de la cinématosphère!</p>	
+			<p> Parlons coups de coeur, parlons rires, et parlons larmes. Bienvenue sur mon blog.</p>	
+			<p><a href="https://www.facebook.com/melly.vdv" title="mon profil facebook"></a><img src="logo_fb.jpg" alt="logo_fb"></a><a href="https://www.linkedin.com/in/m%C3%A9lanie-vandervaeren-1a054019b/"title="mon profil linkedin"><img src="logo_linkedin.png"alt="logo_linkedin"></a><a href="https://github.com/mel-vdv" title="mon profil github"><img src="logo_github.png" alt="github"></a><a href="mailto:melvdv@yahoo.fr" title="me contacter"><img src="contact.png"alt="contact"></a></p>
+		</aside>
+		<aside id="deco"> </aside>
+	</section>
+	<footer>
+		<div id="mon_top_trois"> </div>
+			<ol>MON TOP 3 :
+				<li>The handmaid's tale</li>
+				<li>Ozark</li>
+				<li>Mommy</li>
+			</ol>
+		<div id="plateformes"></div>
+			<ul>
+				<li><a href="http://www.allocine.fr/"title="allocine"><img src="logo_allocine.png"></a></li>
+				<li><a href="https://www.imdb.com/"title="IMDB"><img src="logo_imdb.png"></a></li>
+				<li><a href="https://www.ocs.fr/"title="ocs"><img src="ocs_logo.jfif"></a></li>
+			</ul>
+	</footer>
+</div>
+</body>
+</html>
